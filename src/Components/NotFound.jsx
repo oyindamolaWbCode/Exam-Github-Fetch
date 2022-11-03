@@ -8,7 +8,7 @@ const NotFound = () => {
           <h1 className="text-danger">oops</h1>
           <p>404 - Page not found</p>
           <div className="redirect">
-          <button><Link to ="/" style={{textDecoration: "none"}}>Homepage</Link></button>
+          <button style={{border: "none", borderRadius: "8px", padding: "12px 22px"}}><Link to ="/" style={{textDecoration: "none"}}>Homepage</Link></button>
           </div>
         </div>
       </header>

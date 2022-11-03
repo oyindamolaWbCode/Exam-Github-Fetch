@@ -1,26 +1,30 @@
-//import axios from "axios";
-//import { useEffect } from "react";
-//import { useState } from "react";
-import { Link } from "react-router-dom"
-//import Result from "./Result";
 
-// const url = 'https://api.github.com/users/oyindamolaWbCode/repos';
+import { Link } from "react-router-dom";
+import Navbar from "./Navbar";
+
+export const Homepage = () =>{
+    return(
+        <div className="containerHome"> 
+            <div className="grad">
+                <h1 className="homehead">Hi Welcome !!!</h1>
+                <h4 className="homename">I'm Oyindamola</h4>
+                <p className="homepara">Navigate to <button type="button" class="btn btn-outline-secondary"><Link to="/Repos" style={{
+                     textDecoration:"none",
+                     color:"green"
+                }}> Repositories Page</Link></button> for a look at my projects</p>
+            </div>
+        </div>
+    )
+}
+
 
 const Home = () => {
-//     const [repos, setRepos] = useState([]);
 
-//     useEffect(() =>{
-//       const fetchRepos = async () =>{
-//         const res = await fetch (url);
-//         const repos = await res.json()
-//         setRepos(repos)
-//       }
-//   fetchRepos();
-//     },[]);
+
     return ( 
         <div className="Repos-list">
-           <p>Navigate to <Link to="/Repos"> Repositories Page</Link></p>
-       {/* <Result repos={repos} /> */}
+            < Navbar />
+           <Homepage />
         </div>
      );
 }

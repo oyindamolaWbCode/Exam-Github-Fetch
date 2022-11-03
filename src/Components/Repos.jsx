@@ -1,5 +1,4 @@
-
-
+import Navbar from "./Navbar";
 import { useEffect, useState } from "react";
 import ReactPaginate from "react-paginate";
 
@@ -26,10 +25,13 @@ const Repos = (props) => {
 
   return (
     <>
+   
       <div className="repos">
         {currentItems.map((repo) => {
           return (
             <div className="repos">
+               < Navbar />
+               <div className="box">
               <ul key={repo.id}>
                 <li>
                   Repository Name: <a href={repo.html_url}>{repo.name}</a>
@@ -38,6 +40,7 @@ const Repos = (props) => {
                 <li>Visibility: {repo.Visibility}</li>
                 <li>ID: {repo.id}</li>
               </ul>
+              </div>
             </div>
           );
         })}
@@ -58,30 +61,6 @@ const Repos = (props) => {
       />
     </>
   );
-
-  // const repositoryList = repos.length !== 0 ?(
-  //     repos.map((repo) => (
-  //         <ul key={repo.id}>
-  //             <li>
-  //                 Repository Name:{" "}
-  //                 <a href={repo.html_url}>
-  //                     {repo.name}
-  //                 </a>
-  //             </li>
-  //             <li>Language: {repo.language}</li>
-  //             <li>Visibility: {repo.Visibility}</li>
-  //             <li>ID: {repo.id}</li>
-  //         </ul>
-
-  //     ))
-  // ):(
-  //     <p>Loading...</p>
-  // )
-  // return (
-  //     <div className="repos">
-  //         {repositoryList}
-  //     </div>
-  //  );
 };
 
 export default Repos;

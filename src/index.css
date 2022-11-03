@@ -1,30 +1,102 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Homepage */
+
+.containerHome {
+  width: 100%;
+  height: 92.5vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 20px;
+  background-image: linear-gradient(
+      135deg,
+      rgba(7, 67, 207, 0.9) 30%,
+      rgba(124, 207, 7, 0.7) 20%,
+      rgba(82, 4, 155, 0.7) 50%
+    ),
+    url('./Images/laptop.jpg'); 
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+.grad{
+  margin:200px auto;
+  width:100%;
+  height:auto;
+  text-align: center;
+}
+
+.homehead{
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.homepara{
+  margin-top: 20px;
+}
+/* Navbar Page */
+
+.navbar {
+  width: 100%;
+  height: 55px;
+  padding: 0;
+}
+
+.nav-flex {
+  display: flex;
+  justify-content: flex-end;
+  justify-items: center;
+  text-align: center;
+  align-items: center;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navbar {
+  width: 100%;
+  height: 55px;
+  color: black;
+  padding: 0;
+}
+
+.nav-flex {
+  /* display:flex;
+  justify-content: flex-end; */
+  justify-items: center;
+  text-align: center;
+  align-items: center;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-ol {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-li {
+  color: black;
+  margin: 0 1rem;
 }
 
 /* Not found page */
 
-.container{
+.container {
   margin: 200px auto;
   text-align: center;
   justify-content: center;
   align-items: center;
 }
 
-
 /* ErrorBoundary */
 
-.errorpage{
+.errorpage {
   margin: 50% auto;
   text-align: center;
   justify-content: center;
@@ -33,7 +105,7 @@ code {
 
 /* pagination */
 
-.pagination{
+.pagination {
   list-style: none;
   display: flex;
   justify-content: center;
@@ -43,18 +115,43 @@ code {
   gap: 5px;
 }
 
-.pagination .page-num{
-  padding:8px 15px;
-  cursor:pointer;
+.pagination .page-num {
+  padding: 8px 15px;
+  cursor: pointer;
   border-radius: 3px;
   font-weight: 400;
 }
 
-.pagination .page-num:hover{
-  background-color: #5AB1BB;
-  color:white;
+.pagination .page-num:hover {
+  background-color:rgba(148, 66, 226);
+  color: white;
 }
 
-.pagination .active{
-  background-color: #5AB1BB;
+.pagination .active {
+  background-color: rgba(148, 66, 226);
+}
+
+/* Repos */
+.box{
+  margin:100px auto;
+  width:30%;
+  height:200px;
+  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
+  0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+  padding-top: 18px;
+}
+
+li{
+  list-style: none;
+  margin:0.7em;
+}
+
+a{
+  text-decoration: none;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Error Boundary */
+.errorboundary{
+  background-color: green;
 }

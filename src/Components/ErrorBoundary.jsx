@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import { Component } from "react";
 
  class ErrorBoundary extends Component{
 
@@ -24,7 +24,7 @@ componentDidCatch(error, info){
     render(){
         if(this.state.hasError){
            return(
-            <div className="errorpage">
+            <div className="errorpage" style={{backgroundColor: "black"}}>
                 <h3 className="errorboundary">Some Bugs are creeping in your page!</h3>
             </div>
             
